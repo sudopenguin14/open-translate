@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Open Translate</string>
+    <string name="title_activity_main">Open Translate</string>
+    <string name="package_name">com.sudopenguin14.opentranslate</string>
+    <string name="custom_url_scheme">com.sudopenguin14.opentranslate</string>
+</resources>

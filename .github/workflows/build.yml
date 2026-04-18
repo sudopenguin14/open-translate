@@ -27,7 +27,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleRelease
+          ./gradlew clean assembleRelease
 
       - name: Sign APK
         uses: r0adkll/sign-android-release@v1
