@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Translate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <button id="theme-toggle">🌙</button>
+
+    <div class="container">
+      <h2>Open Translate</h2>
+      
+      <div class="wrapper">
+        <div class="text-input">
+          <div class="row from">
+            <span id="detected-text"></span>
+            <textarea class="from-text" placeholder="Enter Text" maxlength="500"></textarea>
+          </div>
+
+          <div class="to-wrapper" style="position: relative;">
+            <textarea class="to-text" placeholder="Translation" readonly></textarea>
+            <button id="copy-btn" title="Copy">
+              <i class='bx bx-copy'></i>
+            </button>
+          </div>
+        </div>
+
+        <ul class="controls">
+          <li class="row from">
+            <select></select>
+          </li>
+          <li class="row to">
+            <select></select>
+          </li>
+        </ul>
+
+        <p id="char-count">0 / 500</p>
+      </div>
+
+      <button id="translate-btn">Translate</button>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

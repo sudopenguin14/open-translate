@@ -1,0 +1,19 @@
+{
+  "name": "open-translate",
+  "version": "1.0.0",
+  "description": "A FOSS language translator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudopenguin14/open-translate.git"
+  },
+  "author": "sudopenguin14",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sudopenguin14/open-translate/issues"
+  },
+  "homepage": "https://github.com/sudopenguin14/open-translate#readme"
+}
