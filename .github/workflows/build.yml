@@ -27,7 +27,7 @@ jobs:
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew clean assembleDebug
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
