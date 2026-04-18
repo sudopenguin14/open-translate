@@ -16,7 +16,12 @@ jobs:
           distribution: 'temurin'
 
       - name: Install Dependencies
-        run: npm install && npm install @capacitor/android && npx cap copy
+        run: |
+          npm install
+          npm install @capacitor/cli @capacitor/core @capacitor/android
+
+      - name: Capacitor Sync
+        run: npx cap sync
 
       - name: Build with Gradle
         run: |
