@@ -30,18 +30,21 @@ jobs:
           ./gradlew clean assembleRelease
 
       - name: Sign APK
-        uses: ilp0/sign-android-release@v1
+        uses: r0adkll/sign-android-release@v1
         id: sign_app
         with:
-          releaseDir: android/app/build/outputs/apk/release
-          signingKey: ${{ secrets.KEYSTORE }}
-          keyAlias: ${{ secrets.KEY_ALIAS }}
+          releaseDirectory: android/app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.KEYSTORE }}
+          alias: ${{ secrets.KEY_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          BUILD_TOOLS_VERSION: "34.0.0" 
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: OpenTranslate-APK
-          path: android/app/build/outputs/apk/release/*.apk
+          name: OpenTranslate-Signed-APK
+          path: ${{ steps.sign_app.outputs.signedReleaseFile }}
+          retention-days: 3
 
