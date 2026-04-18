@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sudopenguin14/open-translate/issues"
   },
-  "homepage": "https://github.com/sudopenguin14/open-translate#readme"
+  "homepage": "https://github.com/sudopenguin14/open-translate#readme",
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5"
+  }
 }
